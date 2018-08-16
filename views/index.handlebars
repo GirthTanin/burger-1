@@ -8,10 +8,10 @@
             <div class="col-s-6 text-center">
                     {{#each burger}}
                         {{#unless this.devoured}}
-                    <div class="col-xs-6 text-center">
-                        <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
-                            <button type="submit" class="burgerAvailable"> {{this.burger_name}}</button>
-                        </form>
+            <div class="col-s-6 text-center">
+                <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
+                    <button type="submit" class="burgerAvailable"> {{this.burger_name}}</button>
+                </form>
                         {{/unless}}
                     {{/each}}
                      </div>
