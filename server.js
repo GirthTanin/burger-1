@@ -6,17 +6,19 @@ var PORT = process.env.PORT || 8080;
 
 app.use(express.static(__dirname + '/public'));
 
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: false })) //do i need to change this to true? 
  
-app.use(bodyParser.json()) //do i need this here?
+app.use(bodyParser.json());
 
-// require('./app/routing/apiRoutes.js')(app);
-// require('./app/routing/htmlRoutes.js')(app);
+var exphbs = require("express-handlebars");
 
-var routes = require('/controllers/burgers_controllers.js');
-
-app.engine('handlebars' , exphbs({defaultLayout: 'main'}));
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
+
+var routes = require('./controllers/burgers_controllers.js');
+
+app.use(routes);
+//or app.use('/', routes); ??
 
 app.listen(PORT, function () {
   console.log("App is listening on PORT: " + PORT)
