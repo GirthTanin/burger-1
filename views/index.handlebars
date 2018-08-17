@@ -29,9 +29,9 @@
     </div>
 
     <div class="col-xs-3">
-              <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
-                <input type="hidden" name="available" value="0">
-                <button class="btn" type="submit">DEVOUR!</button>
+              <form method ="POST" action="/burgers/update?_method=PUT">
+                <input type="hidden" name="burger_id" value={{this.id}}>
+                <button class="btn" type="submit">DEVOUR IT!</button>
               </form>
         </div>
           {{/unless}}
@@ -39,7 +39,7 @@
     </div>
 
 
-    <div class="col-md-6 text-center">
+    <div class="col-md-4 text-center">
         <ul>
           {{#each burger}}
             {{#if this.devoured}}

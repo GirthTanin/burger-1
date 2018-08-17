@@ -12,15 +12,12 @@ router.get("/", function(req, res) {
     });
   });
 
-// router.get("/", function(req, res) {
-//     burger.all(function(data) {
-//       var hbsObject = {
-//         burger: data
-//       };
-//       console.log(hbsObject);
-//       res.render("index", hbsObject);
-//     });
-//   });
+router.put('burgers/update', function(req, res) {
+    burger.update(req.body.burger_id, function(result){
+        console.log(result);
+        res.redirect('/');
+    });
+});
   
 //   router.post("/api/cats", function(req, res) {
 //     cat.create([
