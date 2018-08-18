@@ -10,7 +10,7 @@ var connection = mysql.createConnection({
   
   connection.connect(function(err) {
     if (err) throw err;
-    // console.log("Successfully connected to mysql db");
+    console.log("Successfully connected to mysql db");
   });
 
   module.exports = connection;

@@ -43,6 +43,10 @@ li {
     font-family: 'Fredoka One', cursive;
 }
 
+.eaten {
+    padding-left: 6%;
+}
+
 #addBurger {
     font-family: 'Fredoka One', cursive;
     font-size: 110%;
