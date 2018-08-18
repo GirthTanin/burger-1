@@ -12,7 +12,7 @@ router.get("/", function(req, res) {
     });
   });
 
-router.put("/burgers/update/:id", function(req, res) {
+router.put("/burgers/api/:id", function(req, res) {
     var burgerID = req.params.id;
         console.log(burgerID);
         burger.updateOne(burgerID, function(result){

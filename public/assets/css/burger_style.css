@@ -5,3 +5,10 @@
 body {
     background-image: url("../img/burgerbackground.jpg") !important;
 }
+
+.container {
+    background-color: #FDDD7E;
+    width: 65%;
+    padding: 5%;
+    margin-top: 5%;
+}

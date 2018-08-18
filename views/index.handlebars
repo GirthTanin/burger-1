@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container rounded">
   <div class="row">
         <div class="col-lg-12 text-center" id="header">
             <h1>EAT DA BURGER!</h1>
@@ -18,33 +18,29 @@
   </div>
 
   <div class="row">
+
+
+    <div class="col-xs-6 text-center">
+        <ul>
         {{#each burger}}
           {{#unless this.devoured}}
+            <li>{{this.burger_name}}
+                <button class="btn" id="devour" data-id={{this.id}}>DEVOUR IT!</button>
+            </li>
+        <br>
+            {{/unless}}
+        {{/each}}
+        </ul>
+    </div>
+
     <div class="col-md-6 text-center">
         <ul>
-            <li>
-              {{this.burger_name}}
-            </li>
-      </ul>
-    </div>
-
-    <div class="col-xs-3">
-              <form method ="POST" action="/burgers/update/{{this.id}}?_method=PUT">
-                <input type="hidden" name="burger_id" value={{this.id}}>
-                <button class="btn" type="submit">DEVOUR IT!</button>
-              </form>
-        </div>
-          {{/unless}}
-        {{/each}}
-    </div>
-
-    <div class="col-md-3 text-center">
-        <ul>
-          {{#each burger}}
-            {{#if this.devoured}}
+        {{#each burger}}
+          {{#if this.devoured}}
               <li>
                 {{this.burger_name}}
               </li>
+            <br>
             {{/if}}
           {{/each}}
         </ul>
@@ -64,7 +60,7 @@
           <input type="text" id="newBurger" name="burger_name">
         </div>
 
-        <button type="submit" class="btn btn-primary">Add Burger</button>
+        <button type="submit" class="btn btn-success">Add Burger</button>
       </form>
     </div>
    </div>
