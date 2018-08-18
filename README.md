@@ -24,6 +24,7 @@ A full stack development project utilizing the MVC design pattern. Features an o
   <li>Express Handlebars</li>
   <li>Body Parser</li>
   <li>MySQL</li>
+  <li>Dotenv</li>
 </ul>
 
 <h2>How does it work?</h2>
