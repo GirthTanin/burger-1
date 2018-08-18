@@ -29,7 +29,7 @@
     </div>
 
     <div class="col-xs-3">
-              <form method ="POST" action="/burgers/update?_method=PUT">
+              <form method ="POST" action="/burgers/update/{{this.id}}?_method=PUT">
                 <input type="hidden" name="burger_id" value={{this.id}}>
                 <button class="btn" type="submit">DEVOUR IT!</button>
               </form>
@@ -38,8 +38,7 @@
         {{/each}}
     </div>
 
-
-    <div class="col-md-4 text-center">
+    <div class="col-md-3 text-center">
         <ul>
           {{#each burger}}
             {{#if this.devoured}}

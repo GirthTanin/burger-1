@@ -1,21 +1,23 @@
-var express = require('express'); //should i not require express here? should i require the server instead? or export module.exports=function(app) & require it here?
+var express = require('express');   //should i not require express here? should i require the server instead? or export module.exports=function(app) & require it here?
 var router = express.Router();
 var burger = require('../models/burger.js');
 
 router.get("/", function(req, res) {
-    burger.all(function(data) {
+    burger.selectAll(function(data) {
       var hbsObject = {
         burger: data
       };
-      console.log(hbsObject);
+    //   console.log(hbsObject);
       res.render("index", hbsObject);
     });
   });
 
-router.put('burgers/update', function(req, res) {
-    burger.update(req.body.burger_id, function(result){
+router.put("/burgers/update/:id", function(req, res) {
+    var burgerID = req.params.id;
+        console.log(burgerID);
+        burger.updateOne(burgerID, function(result){
         console.log(result);
-        res.redirect('/');
+        res.status(200).end();
     });
 });
   

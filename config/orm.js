@@ -1,26 +1,27 @@
 var connection = require("./connection.js");
 
 var orm = {
-    all: function(tableInput, cb) {
+    selectAll: function(tableInput, cb) {
         connection.query('SELECT * FROM ' + tableInput + ';', function(err, result){
             if(err) throw err;
-            cb(result); //does this have to  be result? instead of res?
+            cb(result);
         })
     },
 
-    update: function(tableInput, condition, cb){
-        connection.query('UPDATE ' + tableInput + 'SET devoured=true WHERE id=' + condition + ';', function(err, reults){
+    updateOne: function(tableInput, burgerID, cb){
+        connection.query('UPDATE ' + tableInput + ' SET devoured=true WHERE id=' + burgerID + ';', function(err, result){
+            if(err) throw err;
+            cb(result);
+        })
+    },
+
+    insertOne: function(tableInput, val, cb) {
+        connection.quiery('INSERT INTO ' + tableInput + ' (burger_name) VALUES ("+val+");', function(err, result){
             if(err) throw err;
             cb(result);
         })
     }
 
-
 }
-
-// create: function()
-
-//need to use selectAll(), insertOne(), and updateOne()/////
-//reference cat activity
 
 module.exports = orm; 
