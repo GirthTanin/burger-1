@@ -9,6 +9,42 @@ body {
 .container {
     background-color: #FDDD7E;
     width: 65%;
-    padding: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
     margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#kawaii-burger {
+    width: 40%;
+    height: auto;
+}
+
+h1, h2 {
+    font-family: 'Fredoka One', cursive;
+}
+
+h2 {
+    font-size: 220%;
+}
+
+li {
+    font-family: 'Annie Use Your Telescope', cursive;
+    font-size: 155%;
+}
+
+#devour {
+    font-family: 'Fredoka One', cursive;
+}
+
+#addBurger {
+    font-family: 'Fredoka One', cursive;
+    font-size: 110%;
+}
+
+.form-group {
+    font-family: 'Annie Use Your Telescope', cursive;
+    font-size: 155%;
 }
