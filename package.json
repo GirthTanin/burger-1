@@ -1,5 +1,5 @@
 {
-  "name": "Burger App",
+  "name": "BurgerApp",
   "version": "1.0.0",
   "description": "Full stack app that let's you devour burgers and add new ones.",
   "engines": {
