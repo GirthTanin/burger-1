@@ -52,6 +52,10 @@ li {
     font-size: 110%;
 }
 
+#add {
+    font-family: 'Fredoka One', cursive;
+}
+
 .form-group {
     font-family: 'Annie Use Your Telescope', cursive;
     font-size: 155%;
