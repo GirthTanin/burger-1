@@ -1,17 +1,21 @@
 {
   "name": "Burger App",
   "version": "1.0.0",
-  "description": "",
+  "description": "Full stack app that let's you devour burgers and add new ones.",
+  "engines": {
+    "node": "9.11.1"
+  },
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/linalockheart/burger.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Angelina DiFrancesco",
+  "license": "unlicensed",
   "bugs": {
     "url": "https://github.com/linalockheart/burger/issues"
   },
