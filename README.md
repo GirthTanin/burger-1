@@ -33,6 +33,5 @@ Click the DEVOUR IT button to eat the burger. This moves the burger from the "Bu
 
 <img alt="Add Burger Screenshot" src="./public/assets/img/addburger.png" style="width: 80px;">
 
-<h2>Link</h2>
-Check it out for yourself using the link below!
+<h2>Check it out on Heroku!</h2>
 https://sheltered-lake-45162.herokuapp.com/
