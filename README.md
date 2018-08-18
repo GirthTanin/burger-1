@@ -15,6 +15,7 @@ A full stack development project utilizing the MVC design pattern. Features an o
   <li>jQuery</li>
   <li>Node.js</li>
   <li>MySQL</li>
+  <li>MAMP</li>
   <li>Google Fonts</li>
 </ul>
 
