@@ -9,8 +9,8 @@ body {
 .container {
     background-color: #FDDD7E;
     width: 65%;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
     padding-left: 2%;
     padding-right: 2%;
     margin-top: 5%;
@@ -24,6 +24,10 @@ body {
 
 h1, h2 {
     font-family: 'Fredoka One', cursive;
+}
+
+h1 {
+    font-size: 300%;
 }
 
 h2 {

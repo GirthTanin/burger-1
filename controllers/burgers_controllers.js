@@ -12,30 +12,23 @@ router.get("/", function(req, res) {
     });
   });
 
-router.put("/burgers/api/:id", function(req, res) {
-    var burgerID = req.params.id;
-        // console.log(burgerID);
-        burger.updateOne(burgerID, function(result){
-        // console.log(result);
-        res.status(200).end();
+router.put("/burgers/devour/:id", function(req, res) {
+    var condition = "id = " + req.params.id;
+        console.log("condition", condition);
+
+        burger.updateOne({
+          devoured: 1
+        }, condition, function(result) {
+        if (result.changedRows == 0) {
+            return res.status(404).end();
+        } else {
+            res.status(200).end();
+        }
+        });
     });
-});
-  
-//   router.post("/api/cats", function(req, res) {
-//     cat.create([
-//       "name", "sleepy"
-//     ], [
-//       req.body.name, req.body.sleepy
-//     ], function(result) {
-//       // Send back the ID of the new quote
-//       res.json({ id: result.insertId });
-//     });
-//   });
-  
-//   router.put("/api/cats/:id", function(req, res) {
+
+// router.put("/api/cats/:id", function(req, res) {
 //     var condition = "id = " + req.params.id;
-  
-//     console.log("condition", condition);
   
 //     cat.update({
 //       sleepy: req.body.sleepy
@@ -48,5 +41,28 @@ router.put("/burgers/api/:id", function(req, res) {
 //       }
 //     });
 //   });
+
+// router.post("/burgers/add", function(req, res) {
+//     console.log("req: " + req);
+//     var newBurger = req.body;
+//     console.log("req body controller file: " + json.req);
+//     console.log("new burger: " + newBurger);
+//     console.log("new burger dot name: " + newBurger.name);
+//     burger.insertOne(newBurger.name, function(result){
+//         res.redirect("/");
+//     });
+//   });
+  
+  router.post("/burgers/add", function(req, res) {
+    
+    burger.insertOne([
+      "burger_name", "devoured"
+    ], [
+      req.body.name, req.body.devoured
+    ], function(result) {
+      // Send back the ID of the new quote
+      res.json({ id: result.insertId });
+    });
+  });
 
 module.exports = router;
