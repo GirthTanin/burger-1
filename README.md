@@ -35,4 +35,4 @@ Click the DEVOUR IT button to eat the burger. This moves the burger from the "Bu
 
 <h2>Link</h2>
 Check it out for yourself using the link below!
-<br>Insert Heroku Link Here
+https://sheltered-lake-45162.herokuapp.com/
